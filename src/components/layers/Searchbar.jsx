@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Searchbar = ({className}) => {
+const Searchbar = ({className,placeholder}) => {
   return (
-    <input className={className}/>
+    <input className={className} placeholder={placeholder}/>
   )
 }
 

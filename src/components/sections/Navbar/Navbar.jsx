@@ -25,7 +25,7 @@ const Navbar = () => {
 
    
   return (
-  <nav >
+  <nav className='py-8'>
     <Container >
       <Flex className='items-center lg:flex'>  
         <div className="w-full lg:w-3/12">
