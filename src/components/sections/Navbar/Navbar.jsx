@@ -8,15 +8,15 @@ import Container from '../../layers/Container'
 
 const Navbar = () => {
   
-  let [show, setShow]= useState(true);
+  let [Navshow, setNavShow]= useState(true);
   
   useEffect(()=>{
     function scrollWidth(e){
       console.log(window.innerWidth);
       if(window.innerWidth<1024){
-        setShow(false)
+        setNavShow(false)
       }else{
-        setShow(true)
+        setNavShow(true)
       }
     }
     scrollWidth();
@@ -27,14 +27,14 @@ const Navbar = () => {
   return (
   <nav className='py-8'>
     <Container >
-      <Flex className='items-center lg:flex'>  
+      <Flex className='relative items-center lg:flex'>  
         <div className="w-full lg:w-3/12">
           <Image imgsrc="./public/logo.png" alt="logo.png"/>
         </div>
         <div className='w-full lg:w-9/12'>
-        <FaBars  onClick={()=> setShow(!show)} className='absolute block ml-auto lg:hidden top-2.5 right-2.5'/>  
+        <FaBars  onClick={()=> setNavShow(!Navshow)} className='absolute top-0 block ml-auto lg:hidden  right-2.5'/>  
         
-        {show &&
+        {Navshow &&
           <List className="mt-5 lg:justify-end lg:flex lg:gap-x-10 lg:mt-0">
           <ListItem className="font-dm text-[#262626] text-sm font-bold hover:text-[#262626]" ListInnerItem="Home"/>
           <ListItem className="font-dm text-[#767676] text-sm font-bold hover:text-[#262626]" ListInnerItem="Shop"/>
